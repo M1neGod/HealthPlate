@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Health Plate — Expert Guidance</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ШАПКА -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="brand-badge">HP</div>
+        <a href="index.html">Health Plate</a>
+      </div>
+      <nav class="navlinks">
+        <a href="index.html">Home</a>
+        <a class="active" href="Expert Guidance.html">Expert Guidance</a>
+        <a href="Fitness Coaching.html">Fitness Coaching</a>
+        <a href="Shopping List.html">Shopping List</a>
+        <a href="Weekly Planner.html">Weekly Planner</a>
+        <a href="FAQ.html">FAQ</a>
+        <a href="Support.html">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ГОЛОВНИЙ КОНТЕНТ -->
+  <main class="container">
+
+    <section class="intro">
+      <h1>Експертні поради для здорового життя</h1>
+      <p>Наші спеціалісти з харчування, фітнесу та психології допомагають створити здорові звички, які залишаються з вами надовго.</p>
+      
+    </section>
+
+    <section class="articles">
+      <h2>Корисні матеріали</h2>
+      <ul>
+        <li><a href="#">Як правильно формувати тарілку здорового харчування</a></li>
+        <li><a href="#">5 порад, як не пропускати тренування</a></li>
+        <li><a href="#">Роль води у здоровому способі життя</a></li>
+        <li><a href="#">Як скласти збалансований раціон на тиждень</a></li>
+      </ul>
+    </section>
+
+    <section class="experts">
+      <h2>Наші експерти</h2>
+
+      <div class="expert-card">
+        <img src="images/expert1.png" alt="Фото експерта з харчування" width = "400">
+        <h3>Олена Коваль</h3>
+        <p>Сертифікований нутриціолог із 7-річним досвідом роботи. Спеціалізується на збалансованих меню для активних людей.</p>
+      </div>
+
+      <div class="expert-card">
+        <img src="images/expert2.png" alt="Фото фітнес-тренера" width = "400">
+        <h3>Андрій Левченко</h3>
+        <p>Персональний тренер, який допомагає клієнтам досягати цілей без виснажливих тренувань. Прихильник здорового підходу до руху.</p>
+      </div>
+
+      <div class="expert-card">
+        <img src="images/expert3.png" alt="Фото психолога" width = "400">
+        <h3>Марія Сидоренко</h3>
+        <p>Психолог і коуч, який навчає, як зберігати мотивацію та не здаватися на шляху до здоров’я.</p>
+      </div>
+    </section>
+
+    <section class="form-section">
+      <h2>Отримати пораду від експерта</h2>
+      <p>Заповни форму, щоб отримати персональну консультацію від нашої команди.</p>
+
+      <form action="expert-request.php" method="post">
+        <label for="fullname">Ім’я та прізвище:</label><br>
+        <input type="text" id="fullname" name="fullname" required><br><br>
+
+        <label for="topic">Тема запиту:</label><br>
+        <select id="topic" name="topic" required>
+          <option value="">Оберіть тему...</option>
+          <option value="nutrition">Харчування</option>
+          <option value="fitness">Фітнес</option>
+          <option value="motivation">Мотивація</option>
+        </select><br><br>
+
+        <label for="message">Ваше запитання:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+        <button type="submit">Надіслати запит</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ФУТЕР -->
+  <footer>
+    <div class="container">
+      <p>© 2025 Health Plate. Усі права захищено.</p>
+      <p>
+        <a href="Support.html">Зв’язатися з підтримкою</a> |
+        <a href="FAQ.html">FAQ</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

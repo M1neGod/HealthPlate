@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Health Plate — Fitness Coaching</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ШАПКА -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="brand-badge">HP</div>
+        <a href="index.html">Health Plate</a>
+      </div>
+      <nav class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="Expert Guidance.html">Expert Guidance</a>
+        <a class="active" href="Fitness Coaching.html">Fitness Coaching</a>
+        <a href="Shopping List.html">Shopping List</a>
+        <a href="Weekly Planner.html">Weekly Planner</a>
+        <a href="FAQ.html">FAQ</a>
+        <a href="Support.html">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ГЕРОЙ -->
+  <section class="hero container">
+    <div class="hero-text">
+      <h1>Фітнес-коучинг для кожного</h1>
+      <p>Отримай індивідуальні тренування та підтримку від наших сертифікованих тренерів. Почни змінювати своє тіло та самопочуття вже сьогодні!</p>
+      <div class="cta">
+        <a href="#form">Записатися на консультацію</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="images/fitness1.jpg" alt="Людина виконує вправи вдома" width="400">
+    </div>
+  </section>
+
+  <!-- ОСНОВНИЙ КОНТЕНТ -->
+  <section class="content container">
+    <h2>Що входить до нашого фітнес-коучингу</h2>
+    <ul>
+      <li>Персоналізована програма тренувань</li>
+      <li>Відеоуроки для дому або спортзалу</li>
+      <li>Контроль прогресу та корекція плану</li>
+      <li>Поради щодо відновлення та харчування</li>
+    </ul>
+
+    <h3>Переваги тренувань з нами:</h3>
+    <ol>
+      <li>Тренери з міжнародною сертифікацією</li>
+      <li>Підтримка 24/7 через онлайн-чат</li>
+      <li>Гнучкий графік занять</li>
+    </ol>
+
+    <p>Ми розуміємо, що кожна людина унікальна, тому наші тренери створюють програму, яка відповідає саме твоїм цілям, фізичному рівню та можливостям.</p>
+  </section>
+
+  <!-- ФОРМА -->
+  <section id="form" class="form-section container">
+    <h2>Запишись на безкоштовну консультацію</h2>
+    <p>Отримай першу розмову з тренером, щоб визначити цілі та план дій.</p>
+    <form action="coaching-request.php" method="post">
+      <label for="name">Ім’я:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="email">Електронна пошта:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="goal">Твоя основна мета:</label><br>
+      <select id="goal" name="goal">
+        <option value="weight_loss">Схуднення</option>
+        <option value="muscle_gain">Набір м’язової маси</option>
+        <option value="endurance">Покращення витривалості</option>
+        <option value="health">Загальне оздоровлення</option>
+      </select><br><br>
+
+      <button type="submit">Надіслати заявку</button>
+    </form>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-block container">
+    <h2>Готовий до змін?</h2>
+    <p>Почни тренуватися з нами і побачиш результат вже через кілька тижнів!</p>
+    <a href="Weekly Planner.html">Створити план тренувань</a>
+  </section>
+
+  <!-- ФУТЕР -->
+  <footer>
+    <div class="container">
+      <p>© 2025 Health Plate. Усі права захищено.</p>
+      <p>
+        <a href="Support.html">Зв’язатися з підтримкою</a> | 
+        <a href="FAQ.html">FAQ</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
