@@ -1,150 +1,138 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Health Plate — Support</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>HealthPlate — Підтримка</title>
+  <link rel="stylesheet" href="css/style.css" />
   <!-- Іконки Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  <style>
-    .social-links {
-      display: flex;
-      gap: 40px;
-      margin-top: 15px;
-    }
-    .social-item {
-      text-align: center;
-    }
-    .social-item i {
-      font-size: 28px;
-      color: #4caf50;
-      transition: color 0.3s;
-    }
-    .social-item i:hover {
-      color: #2e7d32;
-    }
-    .social-item p {
-      margin-top: 6px;
-      font-size: 14px;
-    }
-  </style>
 </head>
 <body>
 
-  <!-- ШАПКА -->
-  <header>
-    <div class="container nav">
-      <div class="brand">
-        <div class="brand-badge">HP</div>
-        <a href="index.html">Health Plate</a>
-      </div>
-      <nav class="navlinks">
-        <a href="index.html">Home</a>
-        <a href="Expert Guidance.html">Expert Guidance</a>
-        <a href="Fitness Coaching.html">Fitness Coaching</a>
-        <a href="Shopping List.html">Shopping List</a>
-        <a class="active" href="Weekly Planner.html">Weekly Planner</a>
-        <a href="FAQ.html">FAQ</a>
-        <a href="Support.html">Support</a>
-      </nav>
+  <!-- ХЕДЕР -->
+  <header class="site-header">
+  <div class="container header-row">
+    <div class="brand">
+      <div class="logo" aria-hidden="true"></div>
+      <span class="name">HealthPlate</span>
     </div>
-  </header>
+    <nav class="nav">
+      <a href="Expert Guidance.html">Поради експертів</a>
+      <a href="Fitness Coaching.html">Фітнес-коучинг</a>
+      <a href="Shopping List.html">Shopping List</a>
+      <a href="Weekly Planner.html">Планувальник</a>
+      <a href="FAQ.html">FAQ</a>
+      <a class="active" href="Support.html">Support</a>
+    </nav>
+    <div class="tools">
+      <a class="back-link" href="javascript:history.back()">← Назад</a>
+      </div>
+  </div>
+</header>
 
-  <!-- ГОЛОВНИЙ КОНТЕНТ -->
   <main class="container">
-
-    <section class="intro">
-      <h1>Підтримка користувачів Health Plate</h1>
-      <p>Ми завжди готові допомогти! Якщо маєш питання, технічні труднощі або потребуєш консультації — звернись до нашої служби підтримки.</p>
+    <!-- Вступ -->
+    <section class="card">
+      <h1>Підтримка користувачів HealthPlate</h1>
+      <p class="muted">Ми завжди готові допомогти! Якщо маєш питання, технічні труднощі або потребуєш консультації — звернись до нашої служби підтримки.</p>
     </section>
 
-    <section class="contact-options">
+    <!-- Канали зв’язку -->
+    <section class="card">
       <h2>Як з нами зв’язатися</h2>
-      <div class="contact-cards">
 
-        <div class="contact-card">
+      <div class="contact-grid">
+        <article class="contact-card">
           <h3>📧 Електронна пошта</h3>
           <p>Надішли нам лист на адресу:</p>
-          <a href="mailto:support@healthplate.com">support@healthplate.com</a>
-        </div>
+          <p><a href="mailto:support@healthplate.com">support@healthplate.com</a></p>
+        </article>
 
-        <div class="contact-card">
+        <article class="contact-card">
           <h3>📞 Телефон</h3>
-          <p>Наші консультанти доступні з понеділка по п’ятницю, з 9:00 до 18:00.</p>
-          <a href="tel:+380441234567">+38 (044) 123-45-67</a>
-        </div>
+          <p>Консультанти доступні Пн–Пт, 9:00–18:00.</p>
+          <p><a href="tel:+380441234567">+38 (044) 123-45-67</a></p>
+        </article>
 
-        <div class="contact-card">
+        <article class="contact-card">
           <h3>💬 Онлайн-чат</h3>
-          <p>Напиши нам у чат, щоб отримати швидку відповідь просто зараз.</p>
-          <button onclick="alert('Функція онлайн-чату буде доступна найближчим часом!')">Відкрити чат</button>
-        </div>
-
+          <p>Швидка відповідь у браузері.</p>
+          <p><a class="btn btn-yellow is-disabled" href="#" aria-disabled="true">Чат тимчасово недоступний</a></p>
+        </article>
       </div>
     </section>
 
-    <section class="support-form">
-      <h2>Надіслати повідомлення до служби підтримки</h2>
-      <p>Заповни форму нижче — ми відповімо на твоє звернення протягом 24 годин.</p>
+    <!-- Форма звернення -->
+    <section class="card">
+      <h2>Надіслати звернення</h2>
+      <p class="muted">Заповни форму нижче — ми відповімо протягом 24 годин.</p>
 
-      <form action="support-request.php" method="post">
-        <label for="fullname">Ім’я та прізвище:</label><br>
-        <input type="text" id="fullname" name="fullname" required><br><br>
+      <form class="ui-form" action="#" method="post" novalidate>
+        <div class="field">
+          <label for="fullname">Ім’я та прізвище</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Напр., Олександра Родіна" required>
+          <span class="hint">Обов’язкове поле</span>
+        </div>
 
-        <label for="email">Електронна адреса:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+        <div class="field">
+          <label for="email">Електронна адреса</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          <span class="hint">Перевір правильність адреси</span>
+        </div>
 
-        <label for="topic">Тема звернення:</label><br>
-        <select id="topic" name="topic" required>
-          <option value="">Оберіть тему...</option>
-          <option value="technical">Технічна проблема</option>
-          <option value="payment">Оплата / підписка</option>
-          <option value="nutrition">Поради з харчування</option>
-          <option value="other">Інше</option>
-        </select><br><br>
+        <div class="field">
+          <label for="topic">Тема звернення</label>
+          <select id="topic" name="topic" required>
+            <option value="">Оберіть тему…</option>
+            <option value="technical">Технічна проблема</option>
+            <option value="payment">Оплата / підписка</option>
+            <option value="nutrition">Поради з харчування</option>
+            <option value="other">Інше</option>
+          </select>
+          <span class="hint">Оберіть один варіант</span>
+        </div>
 
-        <label for="message">Повідомлення:</label><br>
-        <textarea id="message" name="message" rows="4" placeholder="Опишіть ваше питання..." required></textarea><br><br>
+        <div class="field">
+          <label for="message">Повідомлення</label>
+          <textarea id="message" name="message" rows="4" placeholder="Опишіть ваше питання…" required></textarea>
+          <span class="hint">Мінімум 10 символів</span>
+        </div>
 
-        <button type="submit">Надіслати звернення</button>
+        <div class="actions">
+          <button type="submit" class="btn btn-yellow">Надіслати звернення</button>
+        </div>
       </form>
     </section>
-<section class="additional-info">
+
+    <!-- Додаткова інформація -->
+    <section class="card">
       <h2>Додаткова інформація</h2>
       <ul>
         <li>⏰ <strong>Графік роботи:</strong> Пн–Пт, 9:00–18:00</li>
         <li>📍 <strong>Адреса офісу:</strong> м. Київ, вул. Здоров’я, 12</li>
       </ul>
 
-<section class="social-media">
-  <h3>🌐 Ми в соцмережах:</h3>
+      <h3>🌐 Ми в соцмережах</h3>
       <div class="social-links">
-        <div class="social-item">
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <p>Instagram</p>
-        </div>
-        <div class="social-item">
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-          <p>Facebook</p>
-        </div>
-        <div class="social-item">
-          <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
-          <p>Telegram</p>
-        </div>
+        <a class="social-item" href="#" aria-label="Instagram">
+          <i class="fab fa-instagram" aria-hidden="true"></i>
+          <span>Instagram</span>
+        </a>
+        <a class="social-item" href="#" aria-label="Facebook">
+          <i class="fab fa-facebook" aria-hidden="true"></i>
+          <span>Facebook</span>
+        </a>
+        <a class="social-item" href="#" aria-label="Telegram">
+          <i class="fab fa-telegram" aria-hidden="true"></i>
+          <span>Telegram</span>
+        </a>
       </div>
     </section>
   </main>
 
-  <!-- ФУТЕР -->
-  <footer>
-    <div class="container">
-      <p>© 2025 Health Plate. Усі права захищено.</p>
-      <p>
-        <a class="active" href="support.html">Зв’язатися з підтримкою</a> |
-        <a href="FAQ.html">FAQ</a>
-      </p>
-    </div>
+  <footer class="container muted site-footer">
+    <small>© 2025 HealthPlate</small>
   </footer>
 
 </body>
