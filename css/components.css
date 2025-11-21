@@ -1,0 +1,237 @@
+/* Картка рецепта */
+.recipe{
+  margin-bottom:36px;background:var(--panel);border:1px solid var(--border);
+  padding:16px;border-radius:var(--radius);box-shadow:var(--shadow);
+}
+
+/* Герої рецептів */
+.hero-syrnyky{
+  background-image:url("https://shuba.life/static/content/thumbs/1824x912/0/81/72forc---c2x1x41px49p-rc-up--98310f5123a349f0fe5ea5a3414c5810.jpg");
+}
+.hero-pasta{
+  background-image:url("https://static.tildacdn.com/tild3762-6437-4439-a237-386235343638/_17.png");
+}
+.hero-salmon{
+  background-image:url("https://znaj.ua/images/2019/02/28/HyICLk5lFT5P5B61TIWTO6HDSXKQ0rgzkwLruG6W.jpeg");
+}
+
+/* Списки інгредієнтів з чекбоксами та фото */
+ul.list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
+.item{display:flex;gap:10px;align-items:flex-start}
+.item label{display:flex;align-items:center;gap:8px;cursor:pointer;flex-wrap:wrap}
+.item .qty{font-size:12px;opacity:.75}
+.item input[type="checkbox"]{margin-top:3px}
+.item input[type="checkbox"]:checked + label{opacity:.65}
+
+/* Мініатюри-іконки (фото через CSS) */
+.thumb{
+  display:inline-block;width:48px;height:48px;flex:0 0 48px;
+  border:1px solid var(--border);border-radius:8px;background:#fff;
+  background-size:cover;background-position:center;transition:transform .2s ease;
+}
+.thumb:hover{transform:scale(1.06)}
+
+/* URLи для всіх інгредієнтів */
+.i-syr{background-image:url("https://img.fozzyshop.com.ua/205118-thickbox_default/tvorog-yagotinske-kislomolochnyj-5-paket.jpg");}
+.i-smetana{background-image:url("https://img.fozzyshop.com.ua/233356-home_default/smetana-molokiya-10.jpg");}
+.i-boroshno{background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO1s88omUbn1R-zvEKES14bBQwdzMBT0uhTg&s");}
+.i-cukor{background-image:url("https://src.zakaz.atbmarket.com/cache/photos/81069/catalog_product_main_81069.jpg");}
+.i-vanil{background-image:url("https://src.zakaz.atbmarket.com/cache/photos/51859/catalog_product_main_51859.jpg");}
+.i-yayce{background-image:url("https://vip.shuvar.com/pub/media/catalog/product/_/3/_3.jpg");}
+.i-sil{background-image:url("https://start-s.com.ua/wp-content/uploads/2023/08/sil-kukhonna-700x620.jpg");}
+.i-oliya{background-image:url("https://vip.shuvar.com/pub/media/catalog/product/O/l/Oliya-Oleyna0900-_tradytsiyna_.jpg");}
+
+.i-spaghetti{background-image:url("https://ungvar.net.ua/upload/images/products/5148.jpg");}
+.i-pesto{background-image:url("https://foodshop.com.ua/images/product/3766/8143/original.jpg");}
+.i-cherry{background-image:url("https://fruit-time.ua/images/cache/products/36/cerri-imp-500x500.jpeg");}
+.i-oliveoil{background-image:url("https://nuts.org.ua/wp-content/uploads/2023/09/farchioni-classico.jpg");}
+.i-parmesan{background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNKt5_eR910IPJ4flPiFjUfBs8UyI2lW5M9A&s");}
+.i-pepper{background-image:url("https://images.prom.ua/2552785341_w640_h640_2552785341.jpg");}
+
+.i-salmon{background-image:url("https://www.express-service.com.ua/upload/iblock/79b/vbhgl70gfy07aymrqbs2a1lmqegjmvmm/ua_pim_248565001001_01.png");}
+.i-broccoli{background-image:url("https://greenshop.com.ua/image/cache/catalog/%20%D0%B8%D0%B7%D0%B4%D0%B5%D0%BB%D0%B8%D1%8F/newcatal/IMG_6988-500x500.jpg");}
+.i-chesnyk{background-image:url("https://pum.in.ua/image-cache/?fi=21144&wt=0&f=static-files%2Fimg%2Fgoods%2Fdb%2Feb%2Fchasnik-ozimiy-lyubasha-8866438.jpg");}
+.i-lemon{background-image:url("https://src.zakaz.atbmarket.com/cache/photos/25/catalog_product_main_25.png");}
+.i-green{background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcUQWxx7T07BP2O3e4AIkZMCAukNo2BuGotQ&s");}
+.i-quinoa{background-image:url("https://cdn.sz.lviv.ua/media/sz_b9b1582d.jpg?w=1024&h=1024");}
+
+/* Універсальна картка (щоб збігалася з рецептом за тоном) */
+.card{
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:16px;
+  margin-bottom:24px;
+  box-shadow:var(--shadow);
+}
+
+/* Список статей */
+.article-list{
+  list-style:none;
+  padding:0; margin:8px 0 0;
+  display:flex; flex-direction:column; gap:10px;
+}
+.article-list a{ text-decoration:underline; }
+.article-list a:hover{ opacity:.9; }
+
+/* Сітка експертів */
+.expert-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:16px;
+}
+@media (min-width:780px){
+  .expert-grid{ grid-template-columns:1fr 1fr 1fr; }
+}
+
+.expert-card{
+  display:flex; flex-direction:column; gap:10px;
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:12px; overflow:hidden;
+}
+.expert-img{
+  width:100%; height:180px;
+  background:#f6f6f6 center/cover no-repeat;
+}
+.expert-body{ padding:12px 12px 14px; }
+
+/* Фото експертів (через CSS, без <img>) */
+.i-expert1{ background-image:url("../images/expert1.png"); }
+.i-expert2{ background-image:url("../images/expert2.png"); }
+.i-expert3{ background-image:url("../images/expert3.png"); }
+
+/* Форма */
+.ui-form{ display:grid; grid-template-columns:1fr; gap:14px; }
+.field{ display:flex; flex-direction:column; gap:6px; }
+label{ font-weight:600; }
+input[type="text"], select, textarea{
+  width:100%;
+  padding:10px 12px;
+  border:1px solid var(--border);
+  border-radius:8px;
+  background:#fff;
+  font:inherit;
+}
+textarea{ resize:vertical; }
+.hint{ font-size:12px; opacity:.7; }
+
+/* HTML5 валідація (базова, без JS) */
+input:invalid, select:invalid, textarea:invalid{
+  border-color:#e11d48; /* червоний контур */
+  outline: none;
+}
+input:valid, select:valid, textarea:valid{
+  border-color:#16a34a; /* зелений контур */
+}
+.actions{ margin-top:4px; }
+
+/* Герой для сторінки Фітнес-коучинг */
+.hero-fitness{
+  background-image: url("../images/fitness1.jpg"); /* твоє локальне фото */
+  }
+
+/* Сітка контактів */
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:16px;
+}
+@media (min-width:780px){
+  .contact-grid{ grid-template-columns:1fr 1fr 1fr; }
+}
+.contact-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:14px;
+}
+
+/* Кнопка-заглушка для чату (без JS) */
+.is-disabled{
+  pointer-events:none;
+  opacity:.6;
+}
+
+/* Соціальні мережі */
+.social-links{
+  display:flex;
+  gap:24px;
+  flex-wrap:wrap;
+  margin-top:10px;
+}
+.social-item{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 12px;
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:999px;
+}
+.social-item i{ font-size:18px; }
+.social-item span{ font-size:14px; }
+.social-item:hover{ box-shadow:var(--shadow); }
+
+/* ---- Weekly Planner ---- */
+
+/* Сітка для чипів вибору дієти */
+.diet-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  border:0;
+  padding:0;
+  margin:0 0 12px;
+}
+.diet-grid legend{font-weight:600;margin-bottom:6px}
+@media (min-width:720px){
+  .diet-grid{grid-template-columns:repeat(3,1fr)}
+}
+
+/* Чип-опція */
+.chip{
+  display:flex; align-items:center; gap:8px;
+  border:1px solid var(--border); border-radius:999px;
+  padding:8px 12px; background:#fff; cursor:pointer;
+}
+.chip input{accent-color:var(--accent-blue)}
+.chip:hover{box-shadow:var(--shadow)}
+
+/* Дві колонки для полів форми */
+.grid.two-cols{
+  display:grid; gap:12px; grid-template-columns:1fr;
+}
+@media (min-width:720px){
+  .grid.two-cols{grid-template-columns:1fr 1fr}
+}
+
+/* Шапка дня */
+.day-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+/* Картки прийомів їжі */
+.meal-grid{
+  display:grid; gap:16px;
+  grid-template-columns:1fr;
+}
+@media (min-width:780px){
+  .meal-grid{grid-template-columns:1fr 1fr 1fr}
+}
+.meal-card{
+  border:1px solid var(--border); border-radius:12px; background:#fff; padding:14px;
+}
+.meal-card h3{margin:8px 0 4px}
+
+/* Мініатюри страв як CSS-фони */
+.meal-thumb{
+  width:100%; height:160px; border:1px solid var(--border);
+  border-radius:10px; background:#fff center/cover no-repeat; margin-bottom:10px;
+}
+
+/* Прив'язка до локальних зображень (шляхи з урахуванням, що CSS у /css/) */
+.i-syrnyky{ background-image:url("../images/Страва1.jpg"); }
+.i-salmon{  background-image:url("../images/Страва3.jpeg"); }
+
+/* Списки-крапки в картках */
+.bullets{padding-left:18px;margin:6px 0}
+

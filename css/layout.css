@@ -1,0 +1,23 @@
+/* Шапка */
+.site-header{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--border);z-index:10}
+.header-row{display:flex;gap:12px;align-items:center}
+.brand{display:flex;gap:8px;align-items:center;margin-right:auto}
+.logo{height:28px;width:28px;background:url("https://drive.google.com/thumbnail?id=1y6Jk-yLQFuFEvoJS_uCW9PZ2JEItjxxE&sz=w512") center/contain no-repeat}
+.brand .name{font-weight:700;letter-spacing:.2px}
+.nav{display:flex;gap:12px}
+.nav a{padding:6px 10px;border-radius:8px}
+.nav a.active{background:var(--accent-yellow)}
+.tools{display:flex;gap:8px;align-items:center}
+.btn{border:1px solid var(--border);background:var(--panel);color:var(--text);padding:6px 10px;cursor:pointer;border-radius:8px}
+.btn-yellow{background:var(--accent-yellow);border-color:var(--accent-yellow)}
+
+/* Контент */
+.hero{
+  width:100%;height:200px;border:1px solid var(--border);
+  overflow:hidden;border-radius:var(--radius);background:var(--panel);
+  background-size:cover;background-position:center;
+}
+.grid{display:grid;grid-template-columns:1fr;gap:24px;margin-top:16px}
+@media (min-width:780px){.grid{grid-template-columns:1fr 1fr}}
+
+.site-footer{border-top:1px solid var(--border);margin-top:28px;padding-top:12px}

@@ -1,0 +1,10 @@
+@import url("./base.css");
+@import url("./layout.css");
+@import url("./components.css");
+
+/* Друк */
+@media print {
+  .site-header, .back-link, .btn { display: none !important; }
+  .recipe { break-inside: avoid; }
+  body { background:#fff; color:#000; }
+}
