@@ -1,100 +1,151 @@
 <!doctype html>
 <html lang="uk">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Weekly Planner — Персоналізоване меню на тиждень</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HealthPlate — Планувальник тижня</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- ШАПКА -->
-  <header>
-    <div>
-      <div>
-        <div>HP</div>
-        <a href="index.html">Health Plate</a>
+  <!-- ХЕДЕР -->
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <span class="name">HealthPlate</span>
       </div>
-      <nav>
-        <a href="index.html">Home</a> |
-        <a href="Expert Guidance.html">Expert Guidance</a> |
-        <a href="Fitness Coaching.html">Fitness Coaching</a> |
-        <a href="Shopping List.html">Shopping List</a> |
-        <a href="Weekly Planner.html">Weekly Planner</a> |
-        <a href="FAQ.html">FAQ</a> |
+
+      <nav class="nav">
+        <a href="Expert Guidance.html">Поради експертів</a>
+        <a href="Fitness Coaching.html">Фітнес-коучинг</a>
+        <a href="Shopping List.html">Shopping List</a>
+        <a class="active" href="Weekly Planner.html">Планувальник</a>
+        <a href="FAQ.html">FAQ</a>
         <a href="Support.html">Support</a>
       </nav>
+
+      <div class="tools">
+        <a class="back-link" href="javascript:history.back()">← Назад</a>
+        <!-- Без кнопки друку на цій сторінці -->
+      </div>
     </div>
   </header>
 
-  <h1>Створи свій персоналізований тижневий план харчування</h1>
+  <main class="container">
 
-  <!-- Обери тип дієти -->
-  <section>
-    <h2>Обери тип дієти</h2>
+    <!-- Вступ -->
+    <section class="card">
+      <h1>Створи персоналізований тижневий план харчування</h1>
+      <p class="muted">Обери тип дієти, денну калорійність і кількість прийомів їжі — ми сформуємо план (демо-версія без скриптів).</p>
+    </section>
 
-    <!-- Вибір типу дієти -->
-    <ul>
-      <li><a href="#">Без обмежень</a></li>
-      <li><a href="#">Вегетеріанство</a></li>
-      <li><a href="#">Веганство</a></li>
-      <li><a href="#">Безглютенова</a></li>
-      <li><a href="#">Безлактозна</a></li>
-      <li><a href="#">Кето</a></li>
-    </ul>
+    <!-- Форма параметрів -->
+    <section class="card">
+      <h2>Параметри плану</h2>
 
-    <div>
-      <p>Я хочу споживати 
-        <input type="number" value="1800"> калорій на день
-      </p>
-      <p>у 
-        <select>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select> прийоми їжі
-      </p>
-      <button>Згенерувати меню</button>
-    </div>
-  </section>
+      <form class="ui-form" action="#" method="get" novalidate>
+        <fieldset class="diet-grid">
+          <legend>Тип дієти</legend>
 
-  <!-- Твій тижневий план -->
-  <main>
-    <h2>Твій тижневий план харчування</h2>
+          <label class="chip">
+            <input type="radio" name="diet" value="none" required>
+            <span>Без обмежень</span>
+          </label>
+          <label class="chip">
+            <input type="radio" name="diet" value="vegetarian">
+            <span>Вегетаріанська</span>
+          </label>
+          <label class="chip">
+            <input type="radio" name="diet" value="vegan">
+            <span>Веганська</span>
+          </label>
+          <label class="chip">
+            <input type="radio" name="diet" value="glutenfree">
+            <span>Безглютенова</span>
+          </label>
+          <label class="chip">
+            <input type="radio" name="diet" value="lactosefree">
+            <span>Безлактозна</span>
+          </label>
+          <label class="chip">
+            <input type="radio" name="diet" value="keto">
+            <span>Кето</span>
+          </label>
+        </fieldset>
 
-    <h3>Понеділок</h3>
+        <div class="grid two-cols">
+          <div class="field">
+            <label for="kcal">Калорій на день</label>
+            <input type="number" id="kcal" name="kcal" inputmode="numeric" min="800" max="5000" step="50" value="1800" required>
+            <span class="hint">Діапазон 800–5000 ккал</span>
+          </div>
 
-    <p><strong>Загальна калорійність за день:</strong> ~1790 ккал</p>
+          <div class="field">
+            <label for="meals">Кількість прийомів їжі</label>
+            <select id="meals" name="meals" required>
+              <option value="">Оберіть…</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+            <span class="hint">Рекомендуємо 3–4</span>
+          </div>
+        </div>
 
-    <article>
-      <h3>Сніданок</h3>
-      <p><strong>Страва:</strong> Сирники</p>
-      <p><strong>Калорійність:</strong> ~510 ккал</p>
-      <div>
-        <img src="images/Страва1.jpg" width="200" alt="Сирники">
+        <div class="actions">
+          <button type="submit" class="btn btn-yellow">Згенерувати меню</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- План тижня (демо: Понеділок) -->
+    <section class="card">
+      <header class="day-head">
+        <h2>Понеділок</h2>
+        <p class="muted"><strong>Загалом за день:</strong> ~1 790 ккал</p>
+      </header>
+
+      <div class="meal-grid">
+        <!-- Сніданок -->
+        <article class="meal-card">
+          <div class="meal-thumb i-syrnyky" role="img" aria-label="Сирники"></div>
+          <h3>Сніданок — Сирники</h3>
+          <p class="muted">~510 ккал</p>
+          <ul class="bullets">
+            <li><a href="Shopping List.html#syrnyky">Список покупок</a></li>
+          </ul>
+        </article>
+
+        <!-- Обід -->
+        <article class="meal-card">
+  <div class="meal-thumb" role="img" aria-label="Паста з песто та томатами"
+       style="background-image:url('https://static.tildacdn.com/tild3762-6437-4439-a237-386235343638/_17.png');">
+  </div>
+  <h3>Обід — Паста з песто та томатами</h3>
+  <p class="muted">~580 ккал</p>
+  <ul class="bullets">
+    <li><a href="Shopping List.html#pasta">Список покупок</a></li>
+  </ul>
+</article>
+
+
+        <!-- Вечеря -->
+        <article class="meal-card">
+          <div class="meal-thumb i-salmon" role="img" aria-label="Лосось з броколі та кіноа"></div>
+          <h3>Вечеря — Лосось з броколі та кіноа</h3>
+          <p class="muted">~700 ккал</p>
+          <ul class="bullets">
+            <li><a href="Shopping List.html#salmon">Список покупок</a></li>
+          </ul>
+        </article>
       </div>
-    </article>
+    </section>
 
-    <article>
-      <h3>Обід</h3>
-      <p><strong>Страва:</strong> Паста з песто та томатами</p>
-      <p><strong>Калорійність:</strong> ~580 ккал</p>
-      <div>
-        <img src="images/Страва2.png" width="200" alt="Паста з песто та томатами">
-      </div>
-    </article>
-
-    <article>
-      <h3>Вечеря</h3>
-      <p><strong>Страва:</strong> Лосось з броколі та кіноа</p>
-      <p><strong>Калорійність:</strong> ~700 ккал</p>
-      <div>
-        <img src="images/Страва3.jpeg" width="200" alt="Лосось з броколі та кіноа">
-      </div>
-    </article>
   </main>
 
-  <footer>
-    <p>© 2025 Weekly Planner. Усі права захищено.</p>
+  <footer class="container muted site-footer">
+    <small>© 2025 HealthPlate</small>
   </footer>
 
 </body>
