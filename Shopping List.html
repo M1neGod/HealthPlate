@@ -7,37 +7,36 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
   <header class="site-header">
-  <div class="container header-row">
-    <div class="brand">
-      <div class="logo" aria-hidden="true"></div>
-      <span class="name">HealthPlate</span>
-    </div>
-
-    <nav class="nav">
-      <a href="Expert Guidance.html">Поради експертів</a>
-      <a href="Fitness Coaching.html">Фітнес-коучинг</a>
-      <a class="active" href="Shopping List.html">Shopping List</a>
-      <a href="Weekly Planner.html">Планувальник</a>
-      <a href="FAQ.html">FAQ</a>
-      <a href="Support.html">Support</a>
-    </nav>
-
-    <div class="tools">
-      <a class="back-link" href="javascript:history.back()">← Назад</a>
+    <div class="container header-row">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <span class="name">HealthPlate</span>
       </div>
-  </div>
-</header>
 
+      <nav class="nav">
+        <a href="index.html">Головна</a>
+        <a href="Expert Guidance.html">Поради експертів</a>
+        <a href="Fitness Coaching.html">Фітнес-коучинг</a>
+        <a class="active" href="Shopping List.html">Shopping List</a>
+        <a href="Weekly Planner.html">Планувальник</a>
+        <a href="FAQ.html">FAQ</a>
+        <a href="Support.html">Support</a>
+      </nav>
 
+      <div class="tools">
+        <button id="theme-toggle" title="Змінити тему">🌙</button>
+        <a class="back-link" href="javascript:history.back()">← Назад</a>
+      </div>
+    </div>
+  </header>
 
   <main class="container">
 
-    <!-- РЕЦЕПТ 1 -->
     <article class="recipe">
       <h1>Сніданок: Сирники</h1>
       <div class="hero hero-syrnyky" role="img" aria-label="Сирники"></div>
-
       <h2>Список продуктів</h2>
       <p class="muted">Кількості наведені для 2 порцій.</p>
 
@@ -45,180 +44,87 @@
         <section class="group">
           <h3>Молочні продукти</h3>
           <ul class="list">
-            <li class="item">
-              <input type="checkbox" id="syr1">
-              <label for="syr1"><span class="thumb i-syr"></span>Домашній сир <span class="qty">— 400 г</span></label>
-            </li>
-            <li class="item">
-              <input type="checkbox" id="syr2">
-              <label for="syr2"><span class="thumb i-smetana"></span>Сметана <span class="qty">— 200 г</span></label>
-            </li>
+            <li class="item"><input type="checkbox" id="syr1"><label for="syr1"><span class="thumb i-syr"></span>Домашній сир <span class="qty">— 400 г</span></label></li>
+            <li class="item"><input type="checkbox" id="syr2"><label for="syr2"><span class="thumb i-smetana"></span>Сметана <span class="qty">— 200 г</span></label></li>
           </ul>
         </section>
-
         <section class="group">
           <h3>Бакалія</h3>
           <ul class="list">
-            <li class="item">
-              <input type="checkbox" id="syr3">
-              <label for="syr3"><span class="thumb i-boroshno"></span>Борошно пшеничне <span class="qty">— 4 ст. л. для панірування</span>
-            </li>
-            <li class="item">
-              <input type="checkbox" id="syr4">
-              <label for="syr4"><span class="thumb i-cukor"></span>Цукор <span class="qty">— 2 ст. л.</span></label>
-            </li>
-            <li class="item">
-              <input type="checkbox" id="syr5">
-              <label for="syr5"><span class="thumb i-vanil"></span>Ванільний цукор <span class="qty">— 1 пак.</span> </label>
-            </li>
+            <li class="item"><input type="checkbox" id="syr3"><label for="syr3"><span class="thumb i-boroshno"></span>Борошно <span class="qty">— 4 ст. л.</span></label></li>
+            <li class="item"><input type="checkbox" id="syr4"><label for="syr4"><span class="thumb i-cukor"></span>Цукор <span class="qty">— 2 ст. л.</span></label></li>
+            <li class="item"><input type="checkbox" id="syr5"><label for="syr5"><span class="thumb i-vanil"></span>Ван. цукор <span class="qty">— 1 пак.</span> </label></li>
           </ul>
         </section>
-
         <section class="group">
           <h3>Інше</h3>
           <ul class="list">
-            <li class="item">
-              <input type="checkbox" id="syr6">
-              <label for="syr6"><span class="thumb i-yayce"></span>Яйця <span class="qty">— 2 шт</span></label>
-            </li>
-            <li class="item">
-              <input type="checkbox" id="syr7">
-              <label for="syr7"><span class="thumb i-sil"></span>Сіль <span class="qty">— щіпка</span></label>
-            </li>
-            <li class="item">
-              <input type="checkbox" id="syr8">
-              <label for="syr8"><span class="thumb i-oliya"></span>Олія для смаження <span class="qty">— 2 ст. л.</span></label>
-            </li>
+            <li class="item"><input type="checkbox" id="syr6"><label for="syr6"><span class="thumb i-yayce"></span>Яйця <span class="qty">— 2 шт</span></label></li>
+            <li class="item"><input type="checkbox" id="syr7"><label for="syr7"><span class="thumb i-sil"></span>Сіль <span class="qty">— щіпка</span></label></li>
+            <li class="item"><input type="checkbox" id="syr8"><label for="syr8"><span class="thumb i-oliya"></span>Олія <span class="qty">— 2 ст. л.</span></label></li>
           </ul>
         </section>
       </div>
     </article>
 
-    <!-- РЕЦЕПТ 2 -->
     <article class="recipe">
       <h1>Обід: Паста з песто та томатами</h1>
       <div class="hero hero-pasta" role="img" aria-label="Паста з песто"></div>
-
       <h2>Список продуктів</h2>
       <p class="muted">Кількості наведені для 2 порцій.</p>
-
       <div class="grid">
         <section class="group">
           <h3>Бакалія</h3>
-          <ul class="list">
-            <li class="item">
-              <input type="checkbox" id="p1">
-              <label for="p1"><span class="thumb i-spaghetti"></span>Спагетті <span class="qty">— 200 г</span></label>
-            </li>
-          </ul>
+          <ul class="list"><li class="item"><input type="checkbox" id="p1"><label for="p1"><span class="thumb i-spaghetti"></span>Спагетті <span class="qty">— 200 г</span></label></li></ul>
         </section>
-
         <section class="group">
           <h3>Соуси</h3>
-          <ul class="list">
-            <li class="item">
-              <input type="checkbox" id="p2">
-              <label for="p2"><span class="thumb i-pesto"></span>Соус песто <span class="qty">— 4 ст. л.</span></label>
-            </li>
-          </ul>
+          <ul class="list"><li class="item"><input type="checkbox" id="p2"><label for="p2"><span class="thumb i-pesto"></span>Соус песто <span class="qty">— 4 ст. л.</span></label></li></ul>
         </section>
-
         <section class="group">
           <h3>Овочі</h3>
-          <ul class="list">
-            <li class="item">
-              <input type="checkbox" id="p3">
-              <label for="p3"><span class="thumb i-cherry"></span>Помідори чері <span class="qty">— 200 г</span></label>
-            </li>
-          </ul>
+          <ul class="list"><li class="item"><input type="checkbox" id="p3"><label for="p3"><span class="thumb i-cherry"></span>Помідори чері <span class="qty">— 200 г</span></label></li></ul>
         </section>
-
         <section class="group">
-          <h3>Олія</h3>
-          <ul class="list">
-            <li class="item">
-              <input type="checkbox" id="p4">
-              <label for="p4"><span class="thumb i-oliveoil"></span>Оливкова олія <span class="qty">— 1 ст. л.</span></label>
-            </li>
-          </ul>
-        </section>
-
-        <section class="group">
-          <h3>Сир</h3>
-          <ul class="list">
-            <li class="item">
-              <input type="checkbox" id="p5">
-              <label for="p5"><span class="thumb i-parmesan"></span>Пармезан <span class="qty">— 30 г</span></label>
-            </li>
-          </ul>
-        </section>
-
-        <section class="group">
-          <h3>Спеції</h3>
-          <ul class="list">
-            <li class="item">
-              <input type="checkbox" id="p6">
-              <label for="p6"><span class="thumb i-sil"></span>Сіль <span class="qty">— 1 ч. л.</span></label>
-            </li>
-            <li class="item">
-              <input type="checkbox" id="p7">
-              <label for="p7"><span class="thumb i-pepper"></span>Перець чорний <span class="qty">— 0.5 ч. л.</span></label>
-            </li>
-          </ul>
+            <h3>Інше</h3>
+            <ul class="list">
+                <li class="item"><input type="checkbox" id="p4"><label for="p4"><span class="thumb i-oliveoil"></span>Оливкова олія <span class="qty">— 1 ст. л.</span></label></li>
+                <li class="item"><input type="checkbox" id="p5"><label for="p5"><span class="thumb i-parmesan"></span>Пармезан <span class="qty">— 30 г</span></label></li>
+            </ul>
         </section>
       </div>
     </article>
 
-    <!-- РЕЦЕПТ 3 -->
     <article class="recipe">
       <h1>Вечеря: Лосось з броколі та кіноа</h1>
       <div class="hero hero-salmon" role="img" aria-label="Лосось з броколі"></div>
-
       <h2>Список продуктів</h2>
       <p class="muted">Кількості наведені для 2 порцій.</p>
-
       <div class="grid">
         <section class="group">
           <h3>Риба</h3>
-          <ul class="list">
-            <li class="item">
-              <input type="checkbox" id="h1">
-              <label for="h1"><span class="thumb i-salmon"></span>Філе лосося <span class="qty">— 2 шт</span> <span class="muted">· 300–400 г</span></label>
-            </li>
-          </ul>
+          <ul class="list"><li class="item"><input type="checkbox" id="h1"><label for="h1"><span class="thumb i-salmon"></span>Філе лосося <span class="qty">— 2 шт</span></label></li></ul>
         </section>
-
         <section class="group">
           <h3>Овочі</h3>
           <ul class="list">
             <li class="item"><input type="checkbox" id="h2"><label for="h2"><span class="thumb i-broccoli"></span>Броколі <span class="qty">— 300 г</span></label></li>
             <li class="item"><input type="checkbox" id="h3"><label for="h3"><span class="thumb i-chesnyk"></span>Часник <span class="qty">— 2 зубч.</span></label></li>
-            <li class="item"><input type="checkbox" id="h4"><label for="h4"><span class="thumb i-lemon"></span>Лимон <span class="qty">— 1 шт</span></label></li>
-            <li class="item"><input type="checkbox" id="h5"><label for="h5"><span class="thumb i-green"></span>Зелень (кріп/петрушка) <span class="qty">— 1 пучок</span></label></li>
           </ul>
         </section>
-
         <section class="group">
           <h3>Крупи</h3>
-          <ul class="list">
-            <li class="item"><input type="checkbox" id="h6"><label for="h6"><span class="thumb i-quinoa"></span>Кіноа <span class="qty">— 150 г</span></label></li>
-          </ul>
-        </section>
-
-        <section class="group">
-          <h3>Заправки та спеції</h3>
-          <ul class="list">
-            <li class="item"><input type="checkbox" id="h7"><label for="h7"><span class="thumb i-oliveoil"></span>Оливкова олія <span class="qty">— 2 ст. л.</span></label></li>
-            <li class="item"><input type="checkbox" id="h8"><label for="h8"><span class="thumb i-sil"></span>Сіль <span class="qty">— дрібка</span></label></li>
-            <li class="item"><input type="checkbox" id="h9"><label for="h9"><span class="thumb i-pepper"></span>Перець чорний <span class="qty">— дрібка</span></label></li>
-          </ul>
+          <ul class="list"><li class="item"><input type="checkbox" id="h6"><label for="h6"><span class="thumb i-quinoa"></span>Кіноа <span class="qty">— 150 г</span></label></li></ul>
         </section>
       </div>
     </article>
+
   </main>
 
   <footer class="container muted site-footer">
-    <small>© 2025 HealthPlate</small>
+    <small>© <span id="current-date">2025</span> HealthPlate</small>
   </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

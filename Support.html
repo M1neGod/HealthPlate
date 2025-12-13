@@ -5,43 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>HealthPlate — Підтримка</title>
   <link rel="stylesheet" href="css/style.css" />
-  <!-- Іконки Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
 
-  <!-- ХЕДЕР -->
   <header class="site-header">
-  <div class="container header-row">
-    <div class="brand">
-      <div class="logo" aria-hidden="true"></div>
-      <span class="name">HealthPlate</span>
-    </div>
-    <nav class="nav">
-      <a href="Expert Guidance.html">Поради експертів</a>
-      <a href="Fitness Coaching.html">Фітнес-коучинг</a>
-      <a href="Shopping List.html">Shopping List</a>
-      <a href="Weekly Planner.html">Планувальник</a>
-      <a href="FAQ.html">FAQ</a>
-      <a class="active" href="Support.html">Support</a>
-    </nav>
-    <div class="tools">
-      <a class="back-link" href="javascript:history.back()">← Назад</a>
+    <div class="container header-row">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <span class="name">HealthPlate</span>
       </div>
-  </div>
-</header>
+      <nav class="nav">
+        <a href="index.html">Головна</a>
+        <a href="Expert Guidance.html">Поради експертів</a>
+        <a href="Fitness Coaching.html">Фітнес-коучинг</a>
+        <a href="Shopping List.html">Shopping List</a>
+        <a href="Weekly Planner.html">Планувальник</a>
+        <a href="FAQ.html">FAQ</a>
+        <a class="active" href="Support.html">Support</a>
+      </nav>
+      <div class="tools">
+        <button id="theme-toggle" title="Змінити тему">🌙</button>
+        <a class="back-link" href="javascript:history.back()">← Назад</a>
+      </div>
+    </div>
+  </header>
 
   <main class="container">
-    <!-- Вступ -->
     <section class="card">
       <h1>Підтримка користувачів HealthPlate</h1>
-      <p class="muted">Ми завжди готові допомогти! Якщо маєш питання, технічні труднощі або потребуєш консультації — звернись до нашої служби підтримки.</p>
+      <p class="muted">Ми завжди готові допомогти! Якщо маєш питання або потребуєш консультації — звернись до нашої служби підтримки.</p>
     </section>
 
-    <!-- Канали зв’язку -->
     <section class="card">
       <h2>Як з нами зв’язатися</h2>
-
       <div class="contact-grid">
         <article class="contact-card">
           <h3>📧 Електронна пошта</h3>
@@ -63,22 +60,21 @@
       </div>
     </section>
 
-    <!-- Форма звернення -->
     <section class="card">
       <h2>Надіслати звернення</h2>
       <p class="muted">Заповни форму нижче — ми відповімо протягом 24 годин.</p>
 
-      <form class="ui-form" action="#" method="post" novalidate>
+      <form id="supportForm" class="ui-form" action="#" method="post" novalidate>
         <div class="field">
           <label for="fullname">Ім’я та прізвище</label>
           <input type="text" id="fullname" name="fullname" placeholder="Напр., Олександра Родіна" required>
-          <span class="hint">Обов’язкове поле</span>
+          <span class="error-message"></span>
         </div>
 
         <div class="field">
           <label for="email">Електронна адреса</label>
           <input type="email" id="email" name="email" placeholder="you@example.com" required>
-          <span class="hint">Перевір правильність адреси</span>
+          <span class="error-message"></span>
         </div>
 
         <div class="field">
@@ -90,22 +86,22 @@
             <option value="nutrition">Поради з харчування</option>
             <option value="other">Інше</option>
           </select>
-          <span class="hint">Оберіть один варіант</span>
         </div>
 
         <div class="field">
           <label for="message">Повідомлення</label>
           <textarea id="message" name="message" rows="4" placeholder="Опишіть ваше питання…" required></textarea>
-          <span class="hint">Мінімум 10 символів</span>
+          <span class="error-message"></span>
         </div>
 
         <div class="actions">
           <button type="submit" class="btn btn-yellow">Надіслати звернення</button>
         </div>
+        
+        <div id="formSuccess"></div>
       </form>
     </section>
 
-    <!-- Додаткова інформація -->
     <section class="card">
       <h2>Додаткова інформація</h2>
       <ul>
@@ -132,8 +128,10 @@
   </main>
 
   <footer class="container muted site-footer">
-    <small>© 2025 HealthPlate</small>
+    <small>© <span id="current-date">2025</span> HealthPlate</small>
   </footer>
+
+  <script src="js/main.js"></script>
 
 </body>
 </html>

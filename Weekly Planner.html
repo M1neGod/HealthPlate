@@ -8,7 +8,6 @@
 </head>
 <body>
 
-  <!-- ХЕДЕР -->
   <header class="site-header">
     <div class="container header-row">
       <div class="brand">
@@ -17,6 +16,7 @@
       </div>
 
       <nav class="nav">
+        <a href="index.html">Головна</a>
         <a href="Expert Guidance.html">Поради експертів</a>
         <a href="Fitness Coaching.html">Фітнес-коучинг</a>
         <a href="Shopping List.html">Shopping List</a>
@@ -26,52 +26,31 @@
       </nav>
 
       <div class="tools">
+        <button id="theme-toggle" title="Змінити тему">🌙</button>
         <a class="back-link" href="javascript:history.back()">← Назад</a>
-        <!-- Без кнопки друку на цій сторінці -->
       </div>
     </div>
   </header>
 
   <main class="container">
 
-    <!-- Вступ -->
     <section class="card">
       <h1>Створи персоналізований тижневий план харчування</h1>
-      <p class="muted">Обери тип дієти, денну калорійність і кількість прийомів їжі — ми сформуємо план (демо-версія без скриптів).</p>
+      <p class="muted">Обери тип дієти, денну калорійність і кількість прийомів їжі — ми сформуємо план (демо-версія).</p>
     </section>
 
-    <!-- Форма параметрів -->
     <section class="card">
       <h2>Параметри плану</h2>
 
-      <form class="ui-form" action="#" method="get" novalidate>
+      <form class="ui-form" action="#" method="get">
         <fieldset class="diet-grid">
           <legend>Тип дієти</legend>
-
-          <label class="chip">
-            <input type="radio" name="diet" value="none" required>
-            <span>Без обмежень</span>
-          </label>
-          <label class="chip">
-            <input type="radio" name="diet" value="vegetarian">
-            <span>Вегетаріанська</span>
-          </label>
-          <label class="chip">
-            <input type="radio" name="diet" value="vegan">
-            <span>Веганська</span>
-          </label>
-          <label class="chip">
-            <input type="radio" name="diet" value="glutenfree">
-            <span>Безглютенова</span>
-          </label>
-          <label class="chip">
-            <input type="radio" name="diet" value="lactosefree">
-            <span>Безлактозна</span>
-          </label>
-          <label class="chip">
-            <input type="radio" name="diet" value="keto">
-            <span>Кето</span>
-          </label>
+          <label class="chip"><input type="radio" name="diet" value="none" required><span>Без обмежень</span></label>
+          <label class="chip"><input type="radio" name="diet" value="vegetarian"><span>Вегетаріанська</span></label>
+          <label class="chip"><input type="radio" name="diet" value="vegan"><span>Веганська</span></label>
+          <label class="chip"><input type="radio" name="diet" value="glutenfree"><span>Безглютенова</span></label>
+          <label class="chip"><input type="radio" name="diet" value="lactosefree"><span>Безлактозна</span></label>
+          <label class="chip"><input type="radio" name="diet" value="keto"><span>Кето</span></label>
         </fieldset>
 
         <div class="grid two-cols">
@@ -99,7 +78,6 @@
       </form>
     </section>
 
-    <!-- План тижня (демо: Понеділок) -->
     <section class="card">
       <header class="day-head">
         <h2>Понеділок</h2>
@@ -107,7 +85,6 @@
       </header>
 
       <div class="meal-grid">
-        <!-- Сніданок -->
         <article class="meal-card">
           <div class="meal-thumb i-syrnyky" role="img" aria-label="Сирники"></div>
           <h3>Сніданок — Сирники</h3>
@@ -117,20 +94,15 @@
           </ul>
         </article>
 
-        <!-- Обід -->
         <article class="meal-card">
-  <div class="meal-thumb" role="img" aria-label="Паста з песто та томатами"
-       style="background-image:url('https://static.tildacdn.com/tild3762-6437-4439-a237-386235343638/_17.png');">
-  </div>
-  <h3>Обід — Паста з песто та томатами</h3>
-  <p class="muted">~580 ккал</p>
-  <ul class="bullets">
-    <li><a href="Shopping List.html#pasta">Список покупок</a></li>
-  </ul>
-</article>
+          <div class="meal-thumb" role="img" aria-label="Паста з песто та томатами" style="background-image:url('https://static.tildacdn.com/tild3762-6437-4439-a237-386235343638/_17.png');"></div>
+          <h3>Обід — Паста з песто та томатами</h3>
+          <p class="muted">~580 ккал</p>
+          <ul class="bullets">
+            <li><a href="Shopping List.html#pasta">Список покупок</a></li>
+          </ul>
+        </article>
 
-
-        <!-- Вечеря -->
         <article class="meal-card">
           <div class="meal-thumb i-salmon" role="img" aria-label="Лосось з броколі та кіноа"></div>
           <h3>Вечеря — Лосось з броколі та кіноа</h3>
@@ -145,8 +117,9 @@
   </main>
 
   <footer class="container muted site-footer">
-    <small>© 2025 HealthPlate</small>
+    <small>© <span id="current-date">2025</span> HealthPlate</small>
   </footer>
 
+  <script src="js/main.js"></script>
 </body>
 </html>

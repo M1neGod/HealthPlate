@@ -8,30 +8,30 @@
 </head>
 <body>
 
-  <!-- ХЕДЕР -->
   <header class="site-header">
-  <div class="container header-row">
-    <div class="brand">
-      <div class="logo" aria-hidden="true"></div>
-      <span class="name">HealthPlate</span>
-    </div>
-    <nav class="nav">
-      <a href="Expert Guidance.html">Поради експертів</a>
-      <a class="active" href="Fitness Coaching.html">Фітнес-коучинг</a>
-      <a href="Shopping List.html">Shopping List</a>
-      <a href="Weekly Planner.html">Планувальник</a>
-      <a href="FAQ.html">FAQ</a>
-      <a href="Support.html">Support</a>
-    </nav>
-    <div class="tools">
-      <a class="back-link" href="javascript:history.back()">← Назад</a>
+    <div class="container header-row">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <span class="name">HealthPlate</span>
       </div>
-  </div>
-</header>
+      <nav class="nav">
+        <a href="index.html">Головна</a>
+        <a href="Expert Guidance.html">Поради експертів</a>
+        <a class="active" href="Fitness Coaching.html">Фітнес-коучинг</a>
+        <a href="Shopping List.html">Shopping List</a>
+        <a href="Weekly Planner.html">Планувальник</a>
+        <a href="FAQ.html">FAQ</a>
+        <a href="Support.html">Support</a>
+      </nav>
+      <div class="tools">
+        <button id="theme-toggle" title="Змінити тему">🌙</button>
+        <a class="back-link" href="javascript:history.back()">← Назад</a>
+      </div>
+    </div>
+  </header>
 
   <main class="container">
 
-    <!-- ГЕРОЙ-БАНЕР -->
     <section class="card">
       <div class="hero hero-fitness" role="img" aria-label="Людина виконує вправи"></div>
       <h1>Фітнес-коучинг для кожного</h1>
@@ -44,7 +44,6 @@
       </p>
     </section>
 
-    <!-- ОСНОВНИЙ КОНТЕНТ -->
     <section class="card">
       <h2>Що входить до нашого фітнес-коучингу</h2>
       <ul>
@@ -60,19 +59,17 @@
         <li>Підтримка 24/7 через онлайн-чат;</li>
         <li>Гнучкий графік занять.</li>
       </ol>
-
       <p>
         Ми розуміємо, що кожна людина унікальна, тому наші тренери створюють програму,
         яка відповідає саме твоїм цілям, рівню підготовки та можливостям.
       </p>
     </section>
 
-    <!-- ФОРМА ЗАПИСУ -->
     <section id="form" class="card">
       <h2>Запишись на безкоштовну консультацію</h2>
       <p class="muted">Отримай першу розмову з тренером, щоб визначити цілі та план дій.</p>
 
-      <form class="ui-form" action="#" method="post" novalidate>
+      <form class="ui-form" action="#" method="post">
         <div class="field">
           <label for="name">Ім’я</label>
           <input type="text" id="name" name="name" placeholder="Напр., Олександра" required>
@@ -82,7 +79,7 @@
         <div class="field">
           <label for="email">Електронна пошта</label>
           <input type="email" id="email" name="email" placeholder="you@example.com" required>
-          <span class="hint">Ми ніколи не ділимося поштою з третіми особами</span>
+          <span class="hint">Ми ніколи не ділимося поштою</span>
         </div>
 
         <div class="field">
@@ -94,7 +91,6 @@
             <option value="endurance">Покращення витривалості</option>
             <option value="health">Загальне оздоровлення</option>
           </select>
-          <span class="hint">Оберіть один варіант</span>
         </div>
 
         <div class="actions">
@@ -103,7 +99,6 @@
       </form>
     </section>
 
-    <!-- CTA-БЛОК -->
     <section class="card">
       <h2>Готова/готовий до змін?</h2>
       <p>Створи тижневий план тренувань і тримай прогрес під контролем.</p>
@@ -113,8 +108,9 @@
   </main>
 
   <footer class="container muted site-footer">
-    <small>© 2025 HealthPlate</small>
+    <small>© <span id="current-date">2025</span> HealthPlate</small>
   </footer>
 
+  <script src="js/main.js"></script>
 </body>
 </html>

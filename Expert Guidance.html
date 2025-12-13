@@ -7,29 +7,30 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- ХЕДЕР як на попередній сторінці -->
+  
   <header class="site-header">
-  <div class="container header-row">
-    <div class="brand">
-      <div class="logo" aria-hidden="true"></div>
-      <span class="name">HealthPlate</span>
-    </div>
-    <nav class="nav">
-      <a class="active" href="Expert Guidance.html">Поради експертів</a>
-      <a href="Fitness Coaching.html">Фітнес-коучинг</a>
-      <a href="Shopping List.html">Shopping List</a>
-      <a href="Weekly Planner.html">Планувальник</a>
-      <a href="FAQ.html">FAQ</a>
-      <a href="Support.html">Support</a>
-    </nav>
-    <div class="tools">
-      <a class="back-link" href="javascript:history.back()">← Назад</a>
+    <div class="container header-row">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <span class="name">HealthPlate</span>
       </div>
-  </div>
-</header>
+      <nav class="nav">
+        <a href="index.html">Головна</a>
+        <a class="active" href="Expert Guidance.html">Поради експертів</a>
+        <a href="Fitness Coaching.html">Фітнес-коучинг</a>
+        <a href="Shopping List.html">Shopping List</a>
+        <a href="Weekly Planner.html">Планувальник</a>
+        <a href="FAQ.html">FAQ</a>
+        <a href="Support.html">Support</a>
+      </nav>
+      <div class="tools">
+        <button id="theme-toggle" title="Змінити тему">🌙</button>
+        <a class="back-link" href="javascript:history.back()">← Назад</a>
+      </div>
+    </div>
+  </header>
 
   <main class="container">
-    <!-- Вступний блок у стилі картки -->
     <section class="card section-intro">
       <h1>Експертні поради для здорового життя</h1>
       <p class="muted">
@@ -38,7 +39,6 @@
       </p>
     </section>
 
-    <!-- Список статей -->
     <section class="card section-articles">
       <h2>Корисні матеріали</h2>
       <ul class="article-list">
@@ -49,18 +49,14 @@
       </ul>
     </section>
 
-    <!-- Експерти у вигляді карток -->
     <section class="card">
       <h2>Наші експерти</h2>
-
       <div class="expert-grid">
         <article class="expert-card">
           <div class="expert-img i-expert1" role="img" aria-label="Експерт з харчування"></div>
           <div class="expert-body">
             <h3>Олена Коваль</h3>
-            <p class="muted">
-              Сертифікований нутриціолог із 7-річним досвідом. Спеціалізація — збалансовані меню для активних людей.
-            </p>
+            <p class="muted">Сертифікований нутриціолог із 7-річним досвідом. Спеціалізація — збалансовані меню для активних людей.</p>
           </div>
         </article>
 
@@ -68,9 +64,7 @@
           <div class="expert-img i-expert2" role="img" aria-label="Фітнес-тренер"></div>
           <div class="expert-body">
             <h3>Андрій Левченко</h3>
-            <p class="muted">
-              Персональний тренер. Допомагає досягати цілей без виснаження, фокус — розумне навантаження й регулярність.
-            </p>
+            <p class="muted">Персональний тренер. Допомагає досягати цілей без виснаження, фокус — розумне навантаження й регулярність.</p>
           </div>
         </article>
 
@@ -78,20 +72,17 @@
           <div class="expert-img i-expert3" role="img" aria-label="Психолог"></div>
           <div class="expert-body">
             <h3>Марія Сидоренко</h3>
-            <p class="muted">
-              Психолог і коуч. Працює з мотивацією та формуванням стійких звичок для довготривалого результату.
-            </p>
+            <p class="muted">Психолог і коуч. Працює з мотивацією та формуванням стійких звичок для довготривалого результату.</p>
           </div>
         </article>
       </div>
     </section>
 
-    <!-- Форма звернення -->
     <section class="card section-form">
       <h2>Отримати пораду від експерта</h2>
       <p class="muted">Заповни форму — ми підберемо спеціаліста під твою задачу.</p>
 
-      <form class="ui-form" action="#" method="post" novalidate>
+      <form class="ui-form" action="#" method="post">
         <div class="field">
           <label for="fullname">Ім’я та прізвище</label>
           <input type="text" id="fullname" name="fullname" placeholder="Напр., Олександра Родіна" required>
@@ -123,7 +114,9 @@
   </main>
 
   <footer class="container muted site-footer">
-    <small>© 2025 HealthPlate</small>
+    <small>© <span id="current-date">2025</span> HealthPlate</small>
   </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
