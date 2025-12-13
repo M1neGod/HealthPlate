@@ -8,3 +8,75 @@
   .recipe { break-inside: avoid; }
   body { background:#fff; color:#000; }
 }
+
+/* --- DARK MODE --- */
+/* Коли на body вішається клас .dark-theme, ми змінюємо змінні кольорів */
+body.dark-theme {
+    --bg: #121212 !important;
+    --panel: #1e1e1e !important;
+    --text: #e0e0e0 !important;
+    --border: #333333 !important;
+    --accent-yellow: #bdae0d !important; /* трохи темніший жовтий */
+    --shadow: 0 4px 12px rgba(0,0,0,0.5) !important;
+}
+
+/* Кнопка перемикання теми */
+#theme-toggle {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-size: 1.2rem;
+    padding: 2px 8px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+#theme-toggle:hover {
+    background-color: var(--border);
+}
+
+/* Підсвітка меню (через JS) */
+.hover-highlight {
+    background-color: rgba(0,0,0,0.05);
+    transition: background 0.2s;
+    border-radius: 6px;
+}
+body.dark-theme .hover-highlight {
+    background-color: rgba(255,255,255,0.15);
+}
+
+/* Стилі для валідації форм */
+.error {
+    border-color: #ff4d4d !important;
+    background-color: #ffe6e6 !important;
+}
+.error-message {
+    color: #ff4d4d;
+    font-size: 0.8rem;
+    margin-top: 4px;
+    display: none; /* Спочатку приховано */
+}
+#formSuccess {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #d4edda;
+    color: #155724;
+    border-radius: 8px;
+    display: none;
+}
+
+/* Стилі для акордеону */
+.hidden-content {
+    display: none;
+}
+.show-more-btn {
+    background: none;
+    border: none;
+    color: var(--text);
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: 5px;
+    font-size: 0.9rem;
+    padding: 0;
+}
