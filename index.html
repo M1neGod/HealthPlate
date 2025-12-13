@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HealthPlate — Головна</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <span class="name">HealthPlate</span>
+      </div>
+
+      <nav class="nav">
+        <a class="active" href="index.html">Головна</a>
+        <a href="Expert Guidance.html">Поради експертів</a>
+        <a href="Fitness Coaching.html">Фітнес-коучинг</a>
+        <a href="Shopping List.html">Shopping List</a>
+        <a href="Weekly Planner.html">Планувальник</a>
+        <a href="FAQ.html">FAQ</a>
+        <a href="Support.html">Support</a>
+      </nav>
+
+      <div class="tools">
+        <button id="theme-toggle" title="Змінити тему">🌙</button>
+        <a class="back-link" href="index.html">← Назад</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="card">
+      <div class="hero hero-main" role="img" aria-label="Тарілка зі здоровою їжею" 
+           style="background-image: url('https://lh6.googleusercontent.com/proxy/YWcCmZej5bCx-s6bmAH-NjGdK-uZzuDIkyna06K-O4Sgtta7V3BQEjSnx2C028bqArNXRomwDIH7ZUpiwPprXVv_4Y_FQM_YaK0MR18BHoSvfusSJ5-C-_oY4vhMMjHjzMYL386BJojR_g4_hXoOQNF2f3uDJSUkGVFpNeJnJSAlvmdR6K8sGbxYtFV6IVqBIp9DQypOwueqcoYWbZBi_wu4ejMyHlIrg8VsAOFd0EK5VsGj');"></div>
+
+      <h1>Твоя тарілка здоров’я</h1>
+      <p class="muted">
+        План харчування і тренування в одному місці. Почни свій шлях до здорового способу життя вже сьогодні!
+      </p>
+      <p>
+        <a class="btn btn-yellow" href="Weekly Planner.html">Почати план на тиждень</a>
+        <a class="btn btn-ghost" href="Shopping List.html">Згенерувати список покупок</a>
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Наші переваги</h2>
+      <ul>
+        <li>Розумний планувальник харчування;</li>
+        <li>Автоматичний підрахунок калорій;</li>
+        <li>Списки покупок у два кліки;</li>
+        <li>Фітнес-коучинг для дому і залу.</li>
+      </ul>
+
+      <h3>Що ще ви отримаєте</h3>
+      <ol>
+        <li>Експертні поради від нутриціологів;</li>
+        <li>Доступ до навчальних матеріалів;</li>
+        <li>Підтримку нашої команди.</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>Про HealthPlate</h2>
+      <p class="muted">
+        HealthPlate — це сервіс, створений для того, щоб зробити здорове життя простим і зручним.
+        Ми поєднуємо <strong>планування харчування</strong>, <strong>фітнес</strong> та
+        <strong>експертні поради</strong> в одному інструменті.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Підпишись на оновлення</h2>
+      <p class="muted">Отримуй нові плани харчування та поради від експертів на свою пошту.</p>
+
+      <form class="ui-form" action="subscribe.php" method="post">
+        <div class="field">
+          <label for="name">Ім’я</label>
+          <input type="text" id="name" name="name" placeholder="Напр., Олександра" required />
+          <span class="hint">Обов’язкове поле</span>
+        </div>
+
+        <div class="field">
+          <label for="email">Електронна пошта</label>
+          <input type="email" id="email" name="email" placeholder="name@example.com" required />
+          <span class="hint">Перевір, щоб адреса була коректною</span>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn btn-yellow">Підписатися</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Почни вже сьогодні!</h2>
+      <p class="muted">
+        Обери план, склади список покупок і розпочни здоровий тиждень з HealthPlate.
+      </p>
+      <p>
+        <a class="btn btn-yellow" href="Weekly Planner.html">Стартувати</a>
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="container muted site-footer">
+    <small>© <span id="current-date">2025</span> HealthPlate</small>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>
